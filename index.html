@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng trái cây</title>
+
+    <!-- simpleCart.js CDN hoạt động ổn định -->
+    <script src="https://cdn.jsdelivr.net/npm/simplecartjs@3.0.6/simplecart.min.js"></script>
+
+    <script>
+        simpleCart({
+            checkout: {
+                type: "SendForm",
+                url: "https://example.com" 
+            },
+            currency: "VND",
+            cartColumns: [
+                { attr: "name", label: "Sản phẩm" },
+                { attr: "price", label: "Giá", view: "currency" },
+                { attr: "quantity", label: "SL" },
+                { view: "decrement", label: "-" },
+                { view: "increment", label: "+" },
+                { attr: "total", label: "Tổng", view: "currency" },
+                { view: "remove", label: "Xóa" }
+            ]
+        });
+    </script>
+
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #fafafa; }
+
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 25px;
+        }
+
+        .card {
+          width: 280px;
+          border-radius: 8px;
+          overflow: hidden;
+          border: 1px solid #ddd;
+          text-align: center;
+          background: white;
+          padding-bottom: 15px;
+        }
+
+        .card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        .card-title {
+          font-size: 20px;
+          font-weight: bold;
+          margin: 10px 0 4px;
+        }
+
+        .card-price {
+          font-size: 17px;
+          margin-bottom: 12px;
+        }
+
+        .btn {
+          width: 85%;
+          padding: 10px;
+          background: #d82727;
+          margin: 6px auto;
+          display: block;
+          color: white;
+          text-decoration: none;
+          border-radius: 6px;
+          font-size: 15px;
+          cursor: pointer;
+        }
+
+        .btn:hover {
+          background: #b81f1f;
+        }
+
+        .cart-box {
+          margin-top: 40px;
+          padding: 15px;
+          background: white;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1 style="text-align:center; margin-bottom:30px;">Cửa hàng trái cây</h1>
+
+<div class="container">
+
+    <!-- 1 -->
+    <div class="card simpleCart_shelfItem">
+      <img src="https://clv.vn/wp-content/uploads/2019/10/chom-chom-globalgap-min.jpg">
+      <div class="card-title item_name">Chôm Chôm Vĩnh Long</div>
+      <div class="card-price">48.000 / Kg<br>Giá hệ thống: <span class="item_price">48000</span></div>
+      <a class="btn item_add">Thêm vào giỏ</a>
+    </div>
+
+    <!-- 2 -->
+    <div class="card simpleCart_shelfItem">
+      <img src="https://traicayvuongtron.vn/resources/cache/original_xxxxx/WEBSITE%202023/tim%20hieu%20them/blog/kinh%20nghiem%2Cmeo%20vat/trai%20cay/trai%20cay%20dac%20san/daudalatlagi/dau-tay-da-lat.gif">
+      <div class="card-title item_name">Dâu Tây Đà Lạt</div>
+      <div class="card-price">190.000 / Kg<br>Giá hệ thống: <span class="item_price">190000</span></div>
+      <a class="btn item_add">Thêm vào giỏ</a>
+    </div>
+
+    <!-- 3 -->
+    <div class="card simpleCart_shelfItem">
+      <img src="https://media.loveitopcdn.com/22928/thumb/dua-xiem-xanh-ben-tre.jpg">
+      <div class="card-title item_name">Dừa Bến Tre</div>
+      <div class="card-price">15.000 / Trái<br>Giá hệ thống: <span class="item_price">15000</span></div>
+      <a class="btn item_add">Thêm vào giỏ</a>
+    </div>
+
+</div>
+
+<hr>
+
+<h2>Giỏ hàng</h2>
+
+<div class="cart-box">
+    <div class="simpleCart_items"></div>
+
+    <h3>Tổng cộng: <span class="simpleCart_total"></span></h3>
+    <h3>Tổng số lượng: <span class="simpleCart_quantity"></span></h3>
+
+    <button onclick="simpleCart.empty()" class="btn">Xoá giỏ hàng</button>
+</div>
+
+</body>
+</html>
