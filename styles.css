@@ -1,0 +1,87 @@
+/* Cài đặt phông chữ và bố cục chung */
+body { font-family: 'Arial', sans-serif; background-color: #f9f9f9; padding: 20px; }
+
+/* Lưới sản phẩm */
+.grid-container {
+  display: grid;
+  /* Lưu ý: Nếu muốn 3x3 cố định, bạn nên dùng: grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Thẻ sản phẩm */
+.product-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.product-price {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Các nút bấm */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-view { background-color: #d32f2f; } /* Màu đỏ */
+.btn-view:hover { background-color: #b71c1c; }
+
+.btn-add { background-color: #388e3c; margin-top: 10px; } /* Màu xanh lá */
+.btn-add:hover { background-color: #2e7d32; }
+
+/* Khu vực Giỏ hàng (Fixed position) */
+#cart-section {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border: 2px solid #d32f2f;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none; /* Ẩn khi chưa có hàng */
+  z-index: 1000;
+}
+
+.cart-header { font-weight: bold; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 10px; }
+.cart-item { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 5px; }
+.cart-total { font-weight: bold; color: #d32f2f; text-align: right; margin-top: 10px; border-top: 1px solid #ddd; padding-top: 5px; }
+
+.btn-checkout { background-color: #d32f2f; width: 100%; margin-top: 10px; }
