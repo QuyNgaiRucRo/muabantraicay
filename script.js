@@ -1,7 +1,7 @@
 // Dữ liệu sản phẩm 
 const products = [
   { id: 1, name: "Chôm chôm Vĩnh Long", price: 48000, img: "TrongNuoc/ChomChom.jpg", desc: "Chôm chôm tróc hạt, vị ngọt đậm đà, cùi dày. Đặc sản Vĩnh Long chính hiệu." },
-  { id: 2, name: "Dâu tây Đà Lạt", price: 190000, img: "TrongNuoc/Dau.jpg", desc: "Dâu tây Đà Lạt tươi ngon, hái tại vườn. Vị chua ngọt thanh mát, giàu vitamin." },
+  { id: 2, name: "Dâu tây Đà Lạt", price: 190000, img: "TrongNuoc/dau.jpg", desc: "Dâu tây Đà Lạt tươi ngon, hái tại vườn. Vị chua ngọt thanh mát, giàu vitamin." },
   { id: 3, name: "Dừa Bến Tre", price: 15000, img: "TrongNuoc/dua.jpg", desc: "Dừa xiêm xanh Bến Tre nước ngọt lịm, cùi dừa vừa ăn. Giải khát tuyệt vời." },
   { id: 4, name: "Nho xanh Ninh Thuận", price: 100000, img: "TrongNuoc/nho.jpg", desc: "Nho xanh Ninh Thuận giòn, ngọt, không hạt. Chùm to đẹp mắt." },
   { id: 5, name: "Xoài Cát Hòa Lộc", price: 80000, img: "TrongNuoc/xoai.jpg", desc: "Vua của các loại xoài. Xoài Cát Hòa Lộc thơm lừng, thịt vàng ươm, ngọt sắc." },
@@ -306,3 +306,4 @@ function checkout() {
 loadCart(); 
 
 render();
+
